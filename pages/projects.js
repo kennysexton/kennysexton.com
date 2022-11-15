@@ -14,7 +14,7 @@ const projects = [
 export default function Projects() {
   return (
     projects.map((item) => (
-      <ProjectHeader {...item} />
+      <ProjectHeader key={item.title} {...item} />
     ))
 
   )

@@ -28,7 +28,7 @@ export default function Nav() {
         </div>
         <div className="flex lg:gap-8 sm:gap-2 text-sm text-neutral-500">
           {navDirectory.map((item) => (
-            <div className="hover:underline hover:underline-offset-8 hover:text-black">
+            <div key={item.name} className="hover:underline hover:underline-offset-8 hover:text-black">
               <Link
                 onClick={() => setActiveNavItem(item.name)}
                 href={item.href}
