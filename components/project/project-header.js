@@ -1,30 +1,34 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function ProjectHeader(props) {
   const {
-    title, tools, year, description, linkText, link,
+    title, tools, year, description, linkText, link, image,
   } = props
 
   return (
 
-    <div className="container flex justify-between flex-col sm:flex-row">
-      <div>
-        <h2 className="text-4xl mb-2">
-          {title}
-        </h2>
-        <p className="max-w-lg text-sm leading-6">
-          {description}
+    <div className="flex flex-col">
+      <div className="flex justify-between flex-col sm:flex-row mb-8">
+        <div>
+          <h2 className="text-4xl mb-2">
+            {title}
+          </h2>
+          <p className="max-w-lg text-sm leading-6">
+            {description}
+            {' '}
+            <Link className="text-sky-600" href={link}>{linkText}</Link>
+          </p>
+        </div>
+        <h3 className="text-xs my-4 sm:my-0 text-center sm:text-start">
+          {tools}
           {' '}
-          <Link href={link}>{linkText}</Link>
-        </p>
+          |
+          {' '}
+          {year}
+        </h3>
       </div>
-      <h3 className="text-xs my-4 sm:my-0 text-center sm:text-start">
-        {tools}
-        {' '}
-        |
-        {' '}
-        {year}
-      </h3>
+      {image && <Image src={image} fill alt={`${title} screenshot`} />}
     </div>
   )
 }
