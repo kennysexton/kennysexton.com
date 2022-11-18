@@ -15,7 +15,7 @@ export default function Nav() {
   const [activeNavItem, setActiveNavItem] = useState(defaultName)
 
   return (
-    <nav className="sticky top-0 h-24">
+    <nav className="sticky backdrop-blur-md bg-white/90 drop-shadow-sm top-0 h-12 sm:h-16">
       <div className="container h-full flex justify-between items-center">
         <div>
           <Link
@@ -26,7 +26,7 @@ export default function Nav() {
             Kenny Sexton
           </Link>
         </div>
-        <div className="flex lg:gap-8 sm:gap-2 text-sm text-neutral-500">
+        <div className="flex lg:gap-8 gap-2 text-sm text-neutral-500">
           {navDirectory.map((item) => (
             <div key={item.name} className="hover:underline hover:underline-offset-8 hover:text-black">
               <Link

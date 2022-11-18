@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <div className={montserrat.className}>
         <Nav />
-        <main>
+        <main className="my-16">
           <Component {...pageProps} />
         </main>
         <Footer />

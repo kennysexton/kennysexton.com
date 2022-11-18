@@ -9,7 +9,7 @@ export default function ProjectHeader(props) {
   return (
 
     <div className="flex flex-col">
-      <div className="flex justify-between flex-col sm:flex-row mb-8">
+      <div className="flex justify-between flex-col sm:flex-row">
         <div>
           <h2 className="text-4xl mb-2">
             {title}
@@ -17,7 +17,7 @@ export default function ProjectHeader(props) {
           <p className="max-w-lg text-sm leading-6">
             {description}
             {' '}
-            <Link className="text-sky-600" href={link}>{linkText}</Link>
+            <Link className="text-sky-600 whitespace-nowrap" href={link}>{linkText}</Link>
           </p>
         </div>
         <h3 className="text-xs my-4 sm:my-0 text-center sm:text-start">
@@ -28,7 +28,13 @@ export default function ProjectHeader(props) {
           {year}
         </h3>
       </div>
-      {image && <Image src={image} fill alt={`${title} screenshot`} />}
+      {image && (
+      <div className="flex justify-center w-full">
+        <div className="w-4/5">
+          <Image src={image} alt={`${title} screenshot`} />
+        </div>
+      </div>
+      )}
     </div>
   )
 }
