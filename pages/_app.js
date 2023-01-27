@@ -4,7 +4,7 @@ import { Montserrat } from '@next/font/google'
 import Nav from '../components/nav'
 import Footer from '../components/footer'
 
-const montserrat = Montserrat()
+const montserrat = Montserrat({ subsets: ['latin'] })
 
 function MyApp({ Component, pageProps }) {
   return (
