@@ -20,7 +20,7 @@ export default function Nav() {
         <div>
           <Link
             onClick={() => setActiveNavItem(defaultName)}
-            className="text-lg"
+            className="text-lg text-neutral-800"
             href="/"
           >
             Kenny Sexton
@@ -28,11 +28,11 @@ export default function Nav() {
         </div>
         <div className="flex lg:gap-8 gap-2 text-sm text-neutral-500">
           {navDirectory.map((item) => (
-            <div key={item.name} className="hover:underline hover:underline-offset-8 hover:text-black">
+            <div key={item.name} className="hover:underline hover:underline-offset-8 hover:text-neutral-800">
               <Link
                 onClick={() => setActiveNavItem(item.name)}
                 href={item.href}
-                className={(activeNavItem === item.name) && 'underline underline-offset-8 text-black'}
+                className={(activeNavItem === item.name) && 'underline underline-offset-8 text-neutral-800'}
               >
                 {item.name}
               </Link>

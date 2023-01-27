@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function ProjectHeader(props) {
   const {
-    title, tools, year, description, linkText, link, image,
+    title, tools, year, description, linkText, link, source, iframe,
   } = props
 
   return (
@@ -28,12 +28,13 @@ export default function ProjectHeader(props) {
           {year}
         </h3>
       </div>
-      {image && (
-      <div className="flex justify-center w-full">
-        <div className="w-4/5">
-          <Image src={image} alt={`${title} screenshot`} />
+      {source && (
+        <div className="flex justify-center w-full">
+          <div className="w-4/5">
+            {iframe ? <iframe src={source} width="100%" height="480" allowFullScreen title={title} />
+              : <Image src={source} alt={`${title} screenshot`} />}
+          </div>
         </div>
-      </div>
       )}
     </div>
   )

@@ -15,7 +15,7 @@ const projects = [
     description: 'A project I started in 2017 to teach myself web development. It uses custom domain redirection to a static GitHub page. I redesign this site every few years as I get more familiar with web development',
     linkText: '(view project)',
     link: 'https://github.com/kennysexton/kennysexton.github.io',
-    image: { ...website },
+    source: { ...website },
   },
   {
     title: 'Bracket Maker',
@@ -24,7 +24,7 @@ const projects = [
     description: 'A tool for making sport playoff brackets. Here users can submit a bracket, view other submissions, as well as view their position on the leaderboard. Submission and result data is pulled from a custom API running on Heroku. ',
     linkText: '(view project)',
     link: 'https://github.com/kennysexton/Sport-Bracket-Maker',
-    image: { ...bracket },
+    source: { ...bracket },
   },
   {
     title: 'Splashdown',
@@ -33,7 +33,7 @@ const projects = [
     description: 'A Create React App project for generating a random city homepage. Each visit to the page selects a random city. A photo from that city is fetched via the unsplash API, as well as the current weather information from Open Weather API. Each time the page is loaded the process repeats.',
     linkText: '(view project)',
     link: 'https://kennysexton.com/splashdown/',
-    image: { ...splashdown },
+    source: { ...splashdown },
   },
   {
     title: 'Contour Line Printer',
@@ -42,7 +42,7 @@ const projects = [
     description: 'A Raspberry Pi Robot car that can print out photos uploaded to a webapp. Uploaded images are converted to a contour line drawing allowing the robot to print your image at any size. ',
     linkText: '(view project)',
     link: 'https://github.com/contourlineprinter/capstone',
-    image: { ...contourLine },
+    source: { ...contourLine },
   },
   {
     title: 'Invisible I',
@@ -51,7 +51,7 @@ const projects = [
     description: 'Team project to create a web tool for viewing metadata associated with images. ',
     linkText: '(view project)',
     link: 'https://github.com/kennysexton/Invisible-I',
-    image: { ...invisibleI },
+    source: { ...invisibleI },
   },
   {
     title: 'Mammoth Coffee',
@@ -60,7 +60,7 @@ const projects = [
     description: 'Mammoth Coffee is a design re-work for a Philadelphia coffee shop.',
     linkText: '(view project)',
     link: 'https://kennysexton.com/MammothCoffee/index.html',
-    image: { ...mammoth },
+    source: { ...mammoth },
   },
 ]
 
@@ -71,6 +71,5 @@ export default function Projects() {
         <ProjectHeader key={item.title} {...item} />
       ))}
     </div>
-
   )
 }
