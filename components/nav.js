@@ -6,7 +6,6 @@ const defaultName = 'Home'
 
 const navDirectory = [
   { href: '/', name: defaultName },
-  { href: '/aerial', name: 'Aerial' },
   { href: '/projects', name: 'Projects' },
   { href: '/books', name: 'Books' },
 ]
