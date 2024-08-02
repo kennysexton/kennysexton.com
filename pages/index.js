@@ -17,7 +17,6 @@ export default function Photography() {
         gap={'2px'}
         lastRowBehavior='fill'
         images={images}
-
       />
     </div>
   )
@@ -75,6 +74,11 @@ const images = [
     aspect_ratio: 2 / 3,
   },
   {
+    src: "https://lh3.googleusercontent.com/pw/AP1GczN4RXVfYEDhakhqVSBxdWwuIoa67FqPSa7WrQ9UWdohYFqEJ1zh6TgjdycVRDHlet7eAU-CbcunBEmHYs2n-NnZGXXnKVuAt3QBzu-U15cBDApLCdff=w2400",
+    alt: "White Sands portrait",
+    aspect_ratio: 2 / 3,
+  },
+  {
     src: "https://lh3.googleusercontent.com/pw/AP1GczNYh4PbLIP51oNcOhcxryXKY99dwar6ljLZ756DUSp2SW2F_h5ZVWQWaoLK68pGwHnbAzQ1bYOlhMj7pmV6LtKXLo7MqidbPuVQwo-oNUGxcH8BXwL1=w2400",
     alt: "Couple holds hands in Paris",
     aspect_ratio: 2 / 3,
@@ -93,11 +97,6 @@ const images = [
     src: "https://lh3.googleusercontent.com/pw/AP1GczPOpcQJW7G0nUUjHLnLf_ZHj7atIks-fPpnVaALCrxjUMkED4ACLT15BN5ij6P0fqLIOYVTGyPV6f2_ZnRdGITZdoCWwrzrCypUVn-Gklh-ZYBaDGUw=w2400",
     alt: "White Sands ultra-wide",
     aspect_ratio: 2.35 / 1,
-  },
-  {
-    src: "https://lh3.googleusercontent.com/pw/AP1GczN4RXVfYEDhakhqVSBxdWwuIoa67FqPSa7WrQ9UWdohYFqEJ1zh6TgjdycVRDHlet7eAU-CbcunBEmHYs2n-NnZGXXnKVuAt3QBzu-U15cBDApLCdff=w2400",
-    alt: "White Sands portrait",
-    aspect_ratio: 2 / 3,
   },
   {
     src: "https://lh3.googleusercontent.com/pw/AP1GczPVxdM4jB3dlAUWR5ClQo3NFiet9YXKM6ch7XqN5htre23IjR2CCxEbHIBs66mZsTkZKj07ltbCUAIaHkJhTa-C5WZg-LM_Prz3fyJ4npgArWEm7DVF=w2400",
@@ -159,7 +158,6 @@ const images = [
     alt: "Oregon Coast grasses and ocean",
     aspect_ratio: 2 / 3,
   },
-
 
   {
     src: "https://lh3.googleusercontent.com/TETc4Tb-4SCq7emfgUKDrkQTEH1706_49w7x4Nc_l1B5tmygS9D0RKg9txRYIGHAmNt1akoqyVG2d-YVykDNLDHu7a5AyHn4zdet-vM8iwHbzG52pC8KzHjbS_2iXp_Is_5PfMlgWg=w2400",
