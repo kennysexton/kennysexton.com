@@ -2,11 +2,11 @@ import Link from 'next/link'
 import { useState } from 'react'
 import styles from '../styles/Nav.module.css'
 
-const defaultName = 'Home'
+const defaultName = 'Photo'
 
 const navDirectory = [
   { href: '/', name: defaultName },
-  { href: '/projects', name: 'Projects' },
+  { href: '/coding', name: 'Coding' },
   { href: '/books', name: 'Books' },
 ]
 

@@ -64,7 +64,7 @@ const projects = [
   },
 ]
 
-export default function Projects() {
+export default function Coding() {
   return (
     <div className="container">
       {projects.map((item) => (
