@@ -14,7 +14,7 @@ export default function Nav() {
   const [activeNavItem, setActiveNavItem] = useState(defaultName)
 
   return (
-    <nav className="sticky backdrop-blur-md bg-white/90 drop-shadow-sm top-0 h-12 sm:h-16">
+    <nav className="sticky backdrop-blur-md bg-white/80 drop-shadow-sm top-0 h-12 sm:h-16 z-50">
       <div className="container h-full flex justify-between items-center">
         <div>
           <Link
