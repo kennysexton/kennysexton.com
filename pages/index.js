@@ -77,7 +77,7 @@ export default function Home() {
         // widths={[500, 1000, 1600]}
         // ratios={[2.2, 4, 6, 8]}
         widths={[500, 1000, 1600]}
-        ratios={[2.2, 4, 6, 8]}
+        ratios={[2.2, 4, 4, 6]}
         gap={'2px'}
         // lastRowBehavior='fill'
         images={images}
