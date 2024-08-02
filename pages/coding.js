@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import ProjectHeader from '@components/project/project-header'
+import ProjectDisplay from '@components/project/ProjectDisplay'
 import website from '@public/project-images/kennysexton.com.png'
 import bracket from '@public/project-images/bracket.png'
 import splashdown from '@public/project-images/splashdown.png'
@@ -68,7 +68,7 @@ export default function Coding() {
   return (
     <div className="container">
       {projects.map((item) => (
-        <ProjectHeader key={item.title} {...item} />
+        <ProjectDisplay key={item.title} {...item} />
       ))}
     </div>
   )

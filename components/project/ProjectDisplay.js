@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function ProjectHeader(props) {
+export default function ProjectDisplay(props) {
   const {
     title, tools, year, description, linkText, link, source, iframe,
   } = props
 
   return (
 
-    <div className="flex flex-col">
+    <div className="flex flex-col mb-8">
       <div className="flex justify-between flex-col sm:flex-row">
         <div>
           <h2 className="text-4xl mb-2">
@@ -30,10 +30,8 @@ export default function ProjectHeader(props) {
       </div>
       {source && (
         <div className="flex justify-center w-full">
-          <div className="w-4/5">
-            {iframe ? <iframe src={source} width="100%" height="480" allowFullScreen title={title} />
-              : <Image src={source} alt={`${title} screenshot`} />}
-          </div>
+          {iframe ? <iframe src={source} width="100%" height="480" allowFullScreen title={title} />
+            : <Image src={source} alt={`${title} screenshot`} />}
         </div>
       )}
     </div>

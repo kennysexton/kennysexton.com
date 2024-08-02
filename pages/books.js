@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import ProjectHeader from '@components/project/project-header'
+import ProjectDisplay from '@components/project/ProjectDisplay'
 
 const books = [
   {
@@ -28,7 +28,7 @@ export default function Books() {
   return (
     <div className="container">
       {books.map((item) => (
-        <ProjectHeader key={item.title} {...item} />
+        <ProjectDisplay key={item.title} {...item} padding={false} />
       ))}
     </div>
   )

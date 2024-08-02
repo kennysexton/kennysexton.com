@@ -6,7 +6,7 @@ import { Gallery } from "next-gallery"
  - next dev
 */
 
-export default function Home() {
+export default function Photography() {
   return (
     <div className="container">
       <Gallery
