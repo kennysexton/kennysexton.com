@@ -4,6 +4,9 @@ import { Montserrat } from 'next/font/google'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 function MyApp({ Component, pageProps }) {
@@ -20,13 +23,15 @@ function MyApp({ Component, pageProps }) {
         <meta name="image" property="og:image" content="/public/project-images/kennysexton.com.png"/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={montserrat.className}>
+      <body className={montserrat.className}>
         <Nav />
         <main className="my-16">
           <Component {...pageProps} />
         </main>
         <Footer />
-      </div>
+        <Analytics />
+        <SpeedInsights />
+      </body>
     </>
 
   )
