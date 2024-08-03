@@ -3,11 +3,10 @@
 
 My personal website. Built using [Next.js](https://nextjs.org/)
 
+<br />
 
-___
 
-
-#### Past Versions of this project
+### Past Versions of this project
 
 [Version 1 | 2017](https://github.com/kennysexton/website.v1)
 
