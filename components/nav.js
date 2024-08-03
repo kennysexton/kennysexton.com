@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from '../styles/Nav.module.css'
+import { useRouter } from 'next/router';
 
 const defaultName = 'Photography'
 
@@ -11,10 +12,28 @@ const navDirectory = [
 ]
 
 export default function Nav() {
-  const [activeNavItem, setActiveNavItem] = useState(defaultName)
+  const router = useRouter();
+  const { pathname } = router;
+  const [activeNavItem, setActiveNavItem] = useState(() => getCurrentSelectedRoute(pathname));
+
+  // Track if user has started scrolling. 
+  const [scrollY, setScrollY] = useState(0);
+  useEffect(() => {
+    console.log(`use effect!`)
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className="sticky backdrop-blur-md bg-white/80 drop-shadow-sm top-0 h-12 sm:h-16 z-50">
+    // When scrolling starts, add a dropshadow to the navbar
+    <nav className={`sticky backdrop-blur-md bg-white/80 top-0 h-12 sm:h-16 z-50 ${scrollY < 5 ? "drop-shadow-none" : "drop-shadow-sm"}`}>
       <div className="container h-full flex justify-between items-center">
         <div>
           <Link
@@ -24,6 +43,7 @@ export default function Nav() {
           >
             Kenny Sexton
           </Link>
+          <div>{activeNavItem}</div>
         </div>
         <div className="flex lg:gap-8 gap-2 text-sm text-neutral-500">
           {navDirectory.map((item) => (
@@ -41,4 +61,19 @@ export default function Nav() {
       </div>
     </nav>
   )
+}
+
+// Handling when a route is manually set by typing in a url
+function getCurrentSelectedRoute(pathname) {
+ for (const navOption of navDirectory) {
+    console.log(`Test   ${pathname} | ${navOption.href}`)
+    if (navOption.href.includes(pathname)) {
+      console.log(`hit! on ${navOption.name}`)
+      return navOption.name
+    }
+  }
+
+  console.warn(`Current pathname does not match any of the existing routes! `)
+  // No match, use default
+  return defaultName;
 }
