@@ -43,7 +43,6 @@ export default function Nav() {
           >
             Kenny Sexton
           </Link>
-          <div>{activeNavItem}</div>
         </div>
         <div className="flex lg:gap-8 gap-2 text-sm text-neutral-500">
           {navDirectory.map((item) => (
