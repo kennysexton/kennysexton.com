@@ -9,6 +9,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
+// Run locally: npm run dev
+
 function MyApp({ Component, pageProps }) {
   return (
     <>

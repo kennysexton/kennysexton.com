@@ -1,11 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import { Gallery } from "next-gallery"
 
-/* Start app commands
- - npx
- - next dev
-*/
-
 export default function Photography() {
   return (
     <div className="container">
