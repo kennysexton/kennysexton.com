@@ -1,34 +1,24 @@
 /* eslint-disable import/no-unresolved */
 import { Gallery } from "next-gallery"
 import Image from 'next/image';
-import images from 'public/images.json'
+import homepage_images from 'public/images.json'
 
 export default function Photography() {
   // Take raw json and convert to the data structure the gallery is looking for
-  const parseJSON = (json) => {
-    console.log(`Original ${JSON.stringify(json)}`)
-    const images2 = []
-    var imageContent = "";
+  const parseJSON = () => {
 
-    json.map((image => {
-
-
-      for (const [key, value] of Object.entries(image)) {
-        
-        if(key === "aspect_ratio") {
-          imageContent = imageContent.concat(`${key} : ${value},`)
-        } else {
-          imageContent = imageContent.concat(`${key} : "${value}",`)
-        }
+    const imageData = homepage_images.map(item => ({
+      src: item.src,
+      alt: item.alt,
+      aspect_ratio: Number(item.aspect_ratio.split('/')[0]) / Number(item.aspect_ratio.split('/')[1]),
+      nextImageProps: {
+        placeholder: "blur",
+        blurDataURL: item.blurDataURL ?? "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPs+A8AAhUBiUo2eoUAAAAASUVORK5CYII="
       }
-      images2.push({imageContent})
-
-      // Clear image content var
-      imageContent = ""
     }))
 
-    console.log(`${JSON.stringify(images2)}`)
-    return images2
+    console.log(`${JSON.stringify(imageData)}`)
+    return imageData
   }
 
   return (
@@ -48,26 +38,13 @@ export default function Photography() {
         ratios={[2.2, 4, 4, 5]}
         gap={'2px'}
         lastRowBehavior='fill'
-        // images={parseJSON(images)}
-        images={test}
+        images={parseJSON()}
       />
 
     </div>
   )
 }
 
-// {src : "https://lh3.googleusercontent.com/pw/AP1GczOoPpuy46QN2_e_dGhAr5uvI0NF7itzBjt6yPlaKsWsYJyZI4BoNBTzSnQP90PQdLLAQEZMIOSfpRgNIhf7F015tWzKhAKNbgKwMigoDccJ42dGdajS=w2400",
-//   alt : "Cactus under soft light",
-//   aspect_ratio : 2/3,
-//   },{src : "https://lh3.googleusercontent.com/pw/AP1GczOoPpuy46QN2_e_dGhAr5uvI0NF7itzBjt6yPlaKsWsYJyZI4BoNBTzSnQP90PQdLLAQEZMIOSfpRgNIhf7F015tWzKhAKNbgKwMigoDccJ42dGdajS=w2400",
-//   alt : "Cactus under soft light",
-//   aspect_ratio : 2/3,
-//   }{src : "https://lh3.googleusercontent.com/pw/AP1GczMf_DVfOSJdviXMn_MfBSULkxutj7XXbIidfD_3f_TCllg9p0NF0WVrVhg6gXdPhGgRfkMW_hVUafkfj2vwiFys9MzDABTprG4an3-BZJjOPzAwzN1U=w2400",
-//   alt : "man with bike in Brussels",
-//   aspect_ratio : 2 / 3,
-//   }
-
-const test =  [{"imageContent":"src : \"https://lh3.googleusercontent.com/pw/AP1GczOoPpuy46QN2_e_dGhAr5uvI0NF7itzBjt6yPlaKsWsYJyZI4BoNBTzSnQP90PQdLLAQEZMIOSfpRgNIhf7F015tWzKhAKNbgKwMigoDccJ42dGdajS=w2400\",alt : \"Cactus under soft light\",aspect_ratio : 2/3,"},{"imageContent":"src : \"https://lh3.googleusercontent.com/pw/AP1GczMf_DVfOSJdviXMn_MfBSULkxutj7XXbIidfD_3f_TCllg9p0NF0WVrVhg6gXdPhGgRfkMW_hVUafkfj2vwiFys9MzDABTprG4an3-BZJjOPzAwzN1U=w2400\",alt : \"man with bike in Brussels\",aspect_ratio : 2 / 3,"}]
 
 // const images = [
 //   {
