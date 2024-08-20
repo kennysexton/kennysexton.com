@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="image" property="og:image" content="/public/project-images/kennysexton.com.png"/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className={montserrat.className}>
+      <div className={montserrat.className}>
         <Nav />
         <main className="my-16">
           <Component {...pageProps} />
@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }) {
         <Footer />
         <Analytics />
         <SpeedInsights />
-      </body>
+      </div>
     </>
 
   )

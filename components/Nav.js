@@ -19,7 +19,6 @@ export default function Nav() {
   // Track if user has started scrolling. 
   const [scrollY, setScrollY] = useState(0);
   useEffect(() => {
-    console.log(`use effect!`)
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
@@ -65,9 +64,7 @@ export default function Nav() {
 // Handling when a route is manually set by typing in a url
 function getCurrentSelectedRoute(pathname) {
  for (const navOption of navDirectory) {
-    console.log(`Test   ${pathname} | ${navOption.href}`)
     if (navOption.href.includes(pathname)) {
-      console.log(`hit! on ${navOption.name}`)
       return navOption.name
     }
   }

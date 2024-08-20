@@ -1,9 +1,18 @@
 /* eslint-disable import/no-unresolved */
 import { Gallery } from "next-gallery"
+import Image from 'next/image';
 
 export default function Photography() {
   return (
     <div className="container">
+      {/* <Image
+        src="https://lh3.googleusercontent.com/pw/AP1GczOoPpuy46QN2_e_dGhAr5uvI0NF7itzBjt6yPlaKsWsYJyZI4BoNBTzSnQP90PQdLLAQEZMIOSfpRgNIhf7F015tWzKhAKNbgKwMigoDccJ42dGdajS=w2400"
+        alt="Cactus under soft light"
+        height={900}
+        width={600}
+        placeholder="blur"
+        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAICAgICAQICAgIDAgIDAwYEAwMDAwcFBQQGCAcJCAgHCAgJCg0LCQoMCggICw8LDA0ODg8OCQsQERAOEQ0ODg7/2wBDAQIDAwMDAwcEBAcOCQgJDg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg7/wAARCAAkABgDASIAAhEBAxEB/8QAGgABAQADAQEAAAAAAAAAAAAAAAcFCQoBBP/EACwQAAEDAwQABQIHAAAAAAAAAAECAwQFBhEABxIhCBMiMUEUMjRCUWFxkdH/xAAYAQADAQEAAAAAAAAAAAAAAAACAwQFBv/EACIRAQABBQABBAMAAAAAAAAAAAECAAMEESExIkFRYXKR0f/aAAwDAQACEQMRAD8A26ofcQrhJSEn2DiftP8AmvJMNmU2c+leOljWLgVuNNjgOEJUejkY7/Qj4Osdct00ezafTZdVnJixZ89uDH5dpLrmQnvPQ670KgbaWdqRX1dUu1t/rWpMurJhs1KiVFtEhbv4ZSUcm3kBXpKwr04PZ5Y+NNQjxt3XZNJ2lgNVF9M+9YynnoMVqTxdKVJDbnFIOSlJKeSvy569RGmubyDJb8i3tPy17HwlNjoO1XaduY7AoNRmz4pqkNKGgX1EpQ2C4lvmteMYTzBPt0D31qJ+JjdTb6m2TR6XXa9NVJjVVM+PDgqQHGnWCR2tQUOJJGCkZI7yNWzdGZPZ8I+486cXYNJhUN55105QhTSO1BIAyOQyPSPn9taJNwWtxdzregX2zPauiM+h5qU4mYwy5EeC1J8lTZUkjiCjCuwoEK+dX5OSxyCMkjDRteG+8H554q3DwZXMZlHc5b0B2Xt3Xed/dfDflxVG6fELX78nXVPu2bWGHJMeXIb8tdPSORMdTYylttlZbIKcJKcHAUSNNQyXKuS0ruYP1P0VRSpQUyy8h3LavuQ5jKSFAYKTkHHY01TKMphOHqE8ifyjhC3GUoXFgj4R+q6ft+IrU/w4XPEkDlHdiqQ6jrC0kHKTn3B1zk7gTpdqX1XYtIfKYDzyXFw3kJcZ5e2QCPScADojTTT5RjOEiRsqaxOdu4MHT9VG3JDlUq6pEpLYPEkIaaShP9Ad/wAnTTTWnbAgBUF1ZXFeu6//2Q=="
+      /> */}
       <Gallery
         // widths={[500, 1000, 1600]}
         // ratios={[2.2, 4, 6, 8]}
@@ -12,7 +21,8 @@ export default function Photography() {
         gap={'2px'}
         lastRowBehavior='fill'
         images={images}
-      />
+      /> 
+
     </div>
   )
 }
@@ -22,10 +32,13 @@ const images = [
     src: "https://lh3.googleusercontent.com/pw/AP1GczOoPpuy46QN2_e_dGhAr5uvI0NF7itzBjt6yPlaKsWsYJyZI4BoNBTzSnQP90PQdLLAQEZMIOSfpRgNIhf7F015tWzKhAKNbgKwMigoDccJ42dGdajS=w2400",
     alt: "Cactus under soft light",
     aspect_ratio: 2 / 3,
+    nextImageProps: {   
+      placeholder: "blur",
+      blurDataURL: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAICAgICAQICAgIDAgIDAwYEAwMDAwcFBQQGCAcJCAgHCAgJCg0LCQoMCggICw8LDA0ODg8OCQsQERAOEQ0ODg7/2wBDAQIDAwMDAwcEBAcOCQgJDg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg7/wAARCAAkABgDASIAAhEBAxEB/8QAGgABAQADAQEAAAAAAAAAAAAAAAcFCQoBBP/EACwQAAEDAwQABQIHAAAAAAAAAAECAwQFBhEABxIhCBMiMUEUMjRCUWFxkdH/xAAYAQADAQEAAAAAAAAAAAAAAAACAwQFBv/EACIRAQABBQABBAMAAAAAAAAAAAECAAMEESExIkFRYXKR0f/aAAwDAQACEQMRAD8A26ofcQrhJSEn2DiftP8AmvJMNmU2c+leOljWLgVuNNjgOEJUejkY7/Qj4Osdct00ezafTZdVnJixZ89uDH5dpLrmQnvPQ670KgbaWdqRX1dUu1t/rWpMurJhs1KiVFtEhbv4ZSUcm3kBXpKwr04PZ5Y+NNQjxt3XZNJ2lgNVF9M+9YynnoMVqTxdKVJDbnFIOSlJKeSvy569RGmubyDJb8i3tPy17HwlNjoO1XaduY7AoNRmz4pqkNKGgX1EpQ2C4lvmteMYTzBPt0D31qJ+JjdTb6m2TR6XXa9NVJjVVM+PDgqQHGnWCR2tQUOJJGCkZI7yNWzdGZPZ8I+486cXYNJhUN55105QhTSO1BIAyOQyPSPn9taJNwWtxdzregX2zPauiM+h5qU4mYwy5EeC1J8lTZUkjiCjCuwoEK+dX5OSxyCMkjDRteG+8H554q3DwZXMZlHc5b0B2Xt3Xed/dfDflxVG6fELX78nXVPu2bWGHJMeXIb8tdPSORMdTYylttlZbIKcJKcHAUSNNQyXKuS0ruYP1P0VRSpQUyy8h3LavuQ5jKSFAYKTkHHY01TKMphOHqE8ifyjhC3GUoXFgj4R+q6ft+IrU/w4XPEkDlHdiqQ6jrC0kHKTn3B1zk7gTpdqX1XYtIfKYDzyXFw3kJcZ5e2QCPScADojTTT5RjOEiRsqaxOdu4MHT9VG3JDlUq6pEpLYPEkIaaShP9Ad/wAnTTTWnbAgBUF1ZXFeu6//2Q=="}
   },
   {
     src: "https://lh3.googleusercontent.com/pw/AP1GczMf_DVfOSJdviXMn_MfBSULkxutj7XXbIidfD_3f_TCllg9p0NF0WVrVhg6gXdPhGgRfkMW_hVUafkfj2vwiFys9MzDABTprG4an3-BZJjOPzAwzN1U=w2400",
-    alt: "man with Bike in Brussels",
+    alt: "man with bike in Brussels",
     aspect_ratio: 2 / 3,
   },
   {
@@ -218,5 +231,6 @@ const images = [
     src: "https://lh3.googleusercontent.com/0cWjES4JLlxhIamNMKqfUvluzXaGgIYL4n6N5GfJWgzhRciMxASZYJHa0l3P288noHzRmowwffWttQzQA4sEELWyMSKXLf853mCnsvjGfkPIEOaRrZNO36fVu_SxmfHI66rw7ucTO2s=w2400",
     alt: "Sunset lighting of my room",
     aspect_ratio: 2 / 3,
+
   },
 ]
