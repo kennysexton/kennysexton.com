@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import { Gallery } from "next-gallery"
 import Image from 'next/image';
-import homepage_images from 'public/images.json'
+import homepage_images from 'public/homepage_images/images.json'
 
 export default function Photography() {
 
