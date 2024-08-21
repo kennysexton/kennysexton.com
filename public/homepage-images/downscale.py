@@ -13,15 +13,14 @@ class ImageData:
         self.aspect_ratio = aspect_ratio
 
 
-def download_and_resize(
-    imageData, fetched_dir, resized_dir, new_width, clearImages=False
-):
+def download_and_resize(imageData, fetched_dir, resized_dir, final_output_name, new_width):
     """Downloads images from a list of URLs, resizes them, and saves them to a directory.
 
     Args:
       imageData: A list of ImageData gathered from a JSON file
       fetched_dir: The directory to save the fetched originals
       resized_dir: The directory to save the resized images
+      final_output_name: The name of the new JSON file generated with thumbnails
       new_width: The desired width of the resized images
     """
     if not os.path.exists(fetched_dir):
@@ -76,7 +75,7 @@ def download_and_resize(
                 "src": item.src,
                 "alt": item.alt,
                 "aspect_ratio": item.aspect_ratio,
-                "blurDataURL": encoded_string,
+                "blurDataURL": "data:image/png;base64," + encoded_string,
             }
 
             output_json.append(data)
@@ -86,13 +85,11 @@ def download_and_resize(
             print(e)
 
     # Create a new JSON file with blur data
-    with open("images_with_thumbnails.json", "w", encoding="utf-8") as file:
+    with open(final_output_name + ".json", "w", encoding="utf-8") as file:
         json.dump(output_json, file, indent=2, ensure_ascii=False)
 
-    # Delete the temporary file
-    if clearImages is True:
-        os.remove(originals_path)
-        os.remove(resized_path)
+    # Logs
+    print(f"Added {len(output_json)} thumbnails to {final_output_name}")
 
 
 def get_image_urls(file_path):
@@ -109,6 +106,4 @@ def get_image_urls(file_path):
 # def getImageUrls(jsonFile)
 image_urls_and_alt_tags = get_image_urls("images.json")
 
-download_and_resize(
-    image_urls_and_alt_tags, "fetched_images", "resized_images", 10, True
-)
+download_and_resize(image_urls_and_alt_tags, "fetched_images", "resized_images", "images_with_thumbnails", 10)
