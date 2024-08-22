@@ -1,4 +1,4 @@
-# kennysexton.com
+# [kennysexton.com](kennysexton.com)
 
 My personal website. Built using [Next.js](https://nextjs.org/)
 

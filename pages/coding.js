@@ -1,6 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import ProjectDisplay from '@components/project/ProjectDisplay'
-import website from '@public/project-images/kennysexton.com.png'
+import website from '@public/project-images/kennysexton.com_next.png'
+import bikestreets from '@public/project-images/bikestreets.png'
 import bracket from '@public/project-images/bracket.png'
 import splashdown from '@public/project-images/splashdown.png'
 import contourLine from '@public/project-images/contourlineprinter.png'
@@ -11,17 +12,26 @@ const projects = [
   {
     title: 'kennysexton.com',
     tools: 'Next.js, Tailwind',
-    year: '2022',
-    description: 'A project I started in 2017 to teach myself web development. It uses custom domain redirection to a static GitHub page. I redesign this site every few years as I get more familiar with web development',
-    linkText: '(view project)',
-    link: 'https://github.com/kennysexton/kennysexton.github.io',
+    year: '2023',
+    description: 'A project I started in 2017 to teach myself web development. Rebuilt from the ground up most recently in 2023. Built as a way to learn the Next.js framework to greatly minimize the overhead of maintaining this site',
+    linkText: '(more info)',
+    link: 'https://github.com/kennysexton/kennysexton.com',
     source: { ...website },
+  },
+  {
+    title: 'Bike Streets',
+    tools: 'Jetpack Compose, Mapbox SDK, Open Street Map',
+    year: '2023',
+    description: 'Individual contributor for the Android app of Bike Streets - A community sourced map of beginner-friendly bike routes across the city of Denver. Upgrated the existing app to use the latest version of the Mapbox SDK, and added routing functionality using a custom hosted version of the Open Street Map and routing algorithm to help riders get to their destination while staying on bike friendly streets.',
+    linkText: '(view project)',
+    link: 'https://github.com/bikestreets/bike-streets-android',
+    source: { ...bikestreets },
   },
   {
     title: 'Bracket Maker',
     tools: 'Express, MongoDB, Heroku',
     year: '2020',
-    description: 'A tool for making sport playoff brackets. Here users can submit a bracket, view other submissions, as well as view their position on the leaderboard. Submission and result data is pulled from a custom API running on Heroku. ',
+    description: 'A tool for making sport playoff brackets. Here users can submit a bracket, view other submissions, as well as view their position on the leaderboard. Submission and result data is pulled from a custom API hosted on Heroku. ',
     linkText: '(view project)',
     link: 'https://github.com/kennysexton/Sport-Bracket-Maker',
     source: { ...bracket },
@@ -32,7 +42,7 @@ const projects = [
     year: '2020',
     description: 'A Create React App project for generating a random city homepage. Each visit to the page selects a random city. A photo from that city is fetched via the unsplash API, as well as the current weather information from Open Weather API. Each time the page is loaded the process repeats.',
     linkText: '(view project)',
-    link: 'https://kennysexton.com/splashdown/',
+    link: 'https://kennysexton.github.io/splashdown/',
     source: { ...splashdown },
   },
   {
