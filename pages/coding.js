@@ -22,7 +22,7 @@ const projects = [
     title: 'Bike Streets',
     tools: 'Jetpack Compose, Mapbox SDK, Open Street Map',
     year: '2023',
-    description: 'Individual contributor for the Android app of Bike Streets - A community sourced map of beginner-friendly bike routes across the city of Denver. Upgrated the existing app to use the latest version of the Mapbox SDK, and added routing functionality using a custom hosted version of the Open Street Map and routing algorithm to help riders get to their destination while staying on bike friendly streets.',
+    description: 'Individual contributor for the Android app of Bike Streets - A community sourced map of beginner-friendly bike routes across the city of Denver. Upgraded the existing app to use the latest version of the Mapbox SDK, and added routing functionality using a custom hosted version of the Open Street Map and routing algorithm to help riders get to their destination while staying on bike friendly streets.',
     linkText: '(view project)',
     link: 'https://github.com/bikestreets/bike-streets-android',
     source: { ...bikestreets },
