@@ -11,7 +11,7 @@ import mammoth from '@public/project-images/mammoth.png'
 const projects = [
   {
     title: 'kennysexton.com',
-    tools: 'Next.js, Tailwind',
+    tools: 'Next.js, React, Tailwind',
     year: '2023',
     description: 'A project I started in 2017 to teach myself web development. Rebuilt from the ground up most recently in 2023. Built as a way to learn the Next.js framework to greatly minimize the overhead of maintaining this site',
     linkText: '(more info)',
