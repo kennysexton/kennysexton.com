@@ -34,7 +34,7 @@ export default function Nav() {
     // When scrolling starts, add a dropshadow to the navbar
     <nav className={`sticky backdrop-blur-md bg-white/80 top-0 h-12 sm:h-16 z-50 ${scrollY < 5 ? "drop-shadow-none" : "drop-shadow-sm"}`}>
       <div className="container h-full flex justify-between items-center">
-        <div>
+
           <Link
             onClick={() => setActiveNavItem(defaultName)}
             className="text-lg text-neutral-800"
@@ -42,8 +42,7 @@ export default function Nav() {
           >
             Kenny Sexton
           </Link>
-        </div>
-        <div className="flex lg:gap-8 gap-2 text-sm text-neutral-500">
+        <div className="flex md:gap-8 gap-3 text-sm text-neutral-500">
           {navDirectory.map((item) => (
             <div key={item.name} className="hover:underline hover:underline-offset-8 hover:text-neutral-800">
               <Link

@@ -1,21 +1,32 @@
 /* eslint-disable import/no-unresolved */
 import ProjectDisplay from '@components/project/ProjectDisplay'
-import website from '@public/project-images/kennysexton.com_next.png'
+import Project from '@components/project/Project'
+import website from '@public/project-images/kennysexton.com.png'
 import bikestreets from '@public/project-images/bikestreets.png'
 import bracket from '@public/project-images/bracket.png'
 import splashdown from '@public/project-images/splashdown.png'
 import contourLine from '@public/project-images/contourlineprinter.png'
 import invisibleI from '@public/project-images/invisible-i.png'
 import mammoth from '@public/project-images/mammoth.png'
+import personalHeatmap from '@public/project-images/personalHeatmap.png'
 
 const projects = [
+  {
+    title: 'Personal Heatmap',
+    tools: 'React, Mapbox WebGL, Express',
+    year: '2024',
+    description: 'Web app for generating a personal heatmap using wearable activity data. Uses a custom express server that can run bulk conversions of all activity files into different heatmap layers.',
+    linkText: '(more info)',
+    link: 'https://github.com/kennysexton/personal-heatmap?tab=readme-ov-file#generate-a-personal-heatmap',
+    source: { ...personalHeatmap },
+  },
   {
     title: 'kennysexton.com',
     tools: 'Next.js, React, Tailwind',
     year: '2023',
-    description: 'A project I started in 2017 to teach myself web development. Rebuilt from the ground up most recently in 2023. Built as a way to learn the Next.js framework to greatly minimize the overhead of maintaining this site',
+    description: 'A project I started in 2017 to teach myself web development. Rebuilt from the ground up most recently in 2023. Built as a way to learn the Next.js framework to greatly minimize the overhead of maintaining this site.',
     linkText: '(more info)',
-    link: 'https://github.com/kennysexton/kennysexton.com',
+    link: 'https://github.com/kennysexton/kennysexton.com?tab=readme-ov-file#kennysextoncom',
     source: { ...website },
   },
   {
@@ -28,6 +39,15 @@ const projects = [
     source: { ...bikestreets },
   },
   {
+    title: 'Splashdown',
+    tools: 'React, JSX, CSS',
+    year: '2020',
+    description: 'A React project for generating a random city homepage. Each visit to the page selects a random city. A photo from that city is fetched via the unsplash API, as well as the current weather information from Open Weather API. Each time the page is loaded the process repeats.',
+    linkText: '(view project)',
+    link: 'https://kennysexton.github.io/splashdown/',
+    source: { ...splashdown },
+  },
+  {
     title: 'Bracket Maker',
     tools: 'Express, MongoDB, Heroku',
     year: '2020',
@@ -35,24 +55,6 @@ const projects = [
     linkText: '(view project)',
     link: 'https://github.com/kennysexton/Sport-Bracket-Maker',
     source: { ...bracket },
-  },
-  {
-    title: 'Splashdown',
-    tools: 'React, JSX, CSS',
-    year: '2020',
-    description: 'A Create React App project for generating a random city homepage. Each visit to the page selects a random city. A photo from that city is fetched via the unsplash API, as well as the current weather information from Open Weather API. Each time the page is loaded the process repeats.',
-    linkText: '(view project)',
-    link: 'https://kennysexton.github.io/splashdown/',
-    source: { ...splashdown },
-  },
-  {
-    title: 'Contour Line Printer',
-    tools: 'Python, JSP, JS, Google Cloud',
-    year: '2019',
-    description: 'A Raspberry Pi Robot car that can print out photos uploaded to a webapp. Uploaded images are converted to a contour line drawing allowing the robot to print your image at any size. ',
-    linkText: '(view project)',
-    link: 'https://github.com/contourlineprinter/capstone',
-    source: { ...contourLine },
   },
   {
     title: 'Invisible I',
@@ -69,16 +71,28 @@ const projects = [
     year: '2018',
     description: 'Mammoth Coffee is a design re-work for a Philadelphia coffee shop.',
     linkText: '(view project)',
-    link: 'https://kennysexton.com/MammothCoffee/index.html',
+    link: 'https://kennysexton.github.io/MammothCoffee/index.html',
     source: { ...mammoth },
   },
+  {
+    title: 'Contour Line Printer',
+    tools: 'Python, JSP, JS, Google Cloud',
+    year: '2019',
+    description: 'A Raspberry Pi Robot car that can print out photos uploaded to a webapp. Uploaded images are converted to a contour line drawing allowing the robot to print your image at any size. ',
+    linkText: '(view project)',
+    link: 'https://github.com/contourlineprinter/capstone',
+    source: { ...contourLine },
+  },
+
+
 ]
 
 export default function Coding() {
   return (
     <div className="container">
       {projects.map((item) => (
-        <ProjectDisplay key={item.title} {...item} />
+        // <ProjectDisplay key={item.title} {...item} />
+        <Project key={item.title} {...item} />
       ))}
     </div>
   )
