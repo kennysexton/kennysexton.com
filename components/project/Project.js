@@ -3,11 +3,11 @@ import Image from 'next/image'
 
 export default function Project(props) {
     const {
-        title, tools, year, description, linkText, link, source, iframe,
+        title, tools, description, link, source,
     } = props
 
     return (
-
+        // Column Flex orientation on mobile, as well as width adjustments
         <Link href={link} rel="noopener noreferrer" target="_blank">
             <div className={`mb-20 z-10 shadow-lg hover:shadow-xl rounded-lg  overflow-hidden  ${link ? 'cursor-pointer' : 'cursor-auto'}`}>
                 <div className="flex flex-col sm:flex-row">
