@@ -9,8 +9,16 @@ import contourLine from '@public/project-images/contourlineprinter.png'
 import invisibleI from '@public/project-images/invisible-i.png'
 import mammoth from '@public/project-images/mammoth.png'
 import personalHeatmap from '@public/project-images/personalHeatmap.png'
+import tanks from '@public/project-images/tanks.jpg'
 
 const projects = [
+  {
+    title: 'Tanks',
+    tools: 'Unity, Blender, C#',
+    description: 'A playable WebGL game that was built using unity. Battle against enemy tanks alone or with a friend. Attempt to complete all missions before running out of lives',
+    link: 'https://play.unity.com/en/games/6e18cf49-f1c3-47c9-8a3b-e05e10b85d03/tanksp',
+    source: { ...tanks },
+  },
   {
     title: 'Personal Heatmap',
     tools: 'React, Mapbox WebGL, Express',
