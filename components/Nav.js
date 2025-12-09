@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import styles from '../styles/Nav.module.css'
 import { useRouter } from 'next/router';
 
 const defaultName = 'Photography'
