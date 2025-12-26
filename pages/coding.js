@@ -10,8 +10,16 @@ import invisibleI from '@public/project-images/invisible-i.png'
 import mammoth from '@public/project-images/mammoth.png'
 import personalHeatmap from '@public/project-images/personalHeatmap.png'
 import tanks from '@public/project-images/tanks.jpg'
+import turbulence from '@public/project-images/turbulence.png'
 
 const projects = [
+  {
+    title: 'Turbulence',
+    tools: 'Electron, React, Powershell',
+    description: 'A Wallpaper Tool for Windows Desktop.',
+    link: 'https://github.com/kennysexton/Turbulence-Wallpaper',
+    source: { ...turbulence },
+  },
   {
     title: 'Tanks',
     tools: 'Unity, Blender, C#',
